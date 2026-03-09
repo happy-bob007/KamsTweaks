@@ -32,6 +32,7 @@ public class SlashSuicide extends Feature {
     @Override
     public void registerCommands(ReloadableRegistrarEvent<@NotNull Commands> commands) {
         LiteralArgumentBuilder<CommandSourceStack> command = Commands.literal("suicide")
+                .requires(source -> source.getSender().hasPermission("kamstweaks.suicide"))
                 .executes(ctx -> {
                     CommandSender sender = ctx.getSource().getSender();
                     if (!KamsTweaks.getInstance().getConfig().getBoolean("slash-suicide", true)) {
