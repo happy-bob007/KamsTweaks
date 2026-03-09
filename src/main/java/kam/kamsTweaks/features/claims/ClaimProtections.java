@@ -275,6 +275,8 @@ public class ClaimProtections implements Listener {
                 openBoxes.put(e.getPlayer(), item);
             } else if (item.getType() == Material.ENDER_CHEST) {
                 e.getPlayer().openInventory(e.getPlayer().getEnderChest());
+			} else if (item.getType() == Material.CRAFTING_TABLE) {
+	                e.getPlayer().openInventory(e.getPlayer().openWorkbench(null, true));
             } else {
                 message(player, Component.text("You don't have block place permissions here! (Claim owned by ").append(Names.instance.getRenderedName(claim.owner), Component.text(")")));
             }
