@@ -565,7 +565,7 @@ public class ClaimProtections implements Listener {
             }
         }
         if (!(entity instanceof Hangable || entity instanceof Hanging || entity instanceof ArmorStand
-                || entity instanceof Boat || entity instanceof Minecart))
+                 || entity instanceof Minecart))
             return;
         if (e.getDamageSource().getCausingEntity() instanceof Player player) {
             Claims.LandClaim claim = claims.getLandClaim(e.getEntity().getLocation());
