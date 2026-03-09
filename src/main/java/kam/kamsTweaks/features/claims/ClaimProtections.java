@@ -279,14 +279,10 @@ public class ClaimProtections implements Listener {
 	                e.getPlayer().openInventory(e.getPlayer().openWorkbench(null, true));
 			} else if (item.getType() == Material.LOOM) {
 	                e.getPlayer().openInventory(e.getPlayer().openLoom(null, true));
-			} else if (item.getType() == Material.CARTOGRAPHY_TABLE) {
-	                e.getPlayer().openInventory(e.getPlayer().openCartography(null, true));
 			} else if (item.getType() == Material.GRINDSTONE) {
 	                e.getPlayer().openInventory(e.getPlayer().openGrindstone(null, true));
 			} else if (item.getType() == Material.ENCHANTING_TABLE) {
 	                e.getPlayer().openInventory(e.getPlayer().openEnchanting(null, true));
-			} else if (item.getType() == Material.SMITHING_TABLE) {
-	                e.getPlayer().openInventory(e.getPlayer().openSmithing(null, true));
 			} else if (item.getType() == Material.STONECUTTER) {
 	                e.getPlayer().openInventory(e.getPlayer().openStonecutter(null, true));
             } else {
