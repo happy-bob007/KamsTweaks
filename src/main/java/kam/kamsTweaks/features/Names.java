@@ -117,8 +117,8 @@ public class Names extends Feature {
                     if (executor instanceof Player player) {
                         Pair<String, List<TextColor>> info;
                         String name = ctx.getArgument("name", String.class).replaceAll(INVIS_REGEX, "");
-                        if (name.length() > 20) {
-                            sender.sendPlainMessage("Nicknames cannot be longer than 20 characters.");
+                        if (name.length() > 50) {
+                            sender.sendPlainMessage("Nicknames cannot be longer than 50 characters.");
                             return Command.SINGLE_SUCCESS;
                         }
                         if (name.isBlank()) {
