@@ -22,7 +22,10 @@ import org.jetbrains.annotations.NotNull;
 public class SlashSuicide extends Feature {
     
     @Override
-    public void setup() {}
+    public void setup() {
+        ConfigCommand.addConfig(new ConfigCommand.BoolConfig("slash-suicide.enabled", "slash-suicide.enabled", true, "kamstweaks.configure"));
+    }
+    
     @Override
     public void shutdown() {}
 
@@ -31,6 +34,10 @@ public class SlashSuicide extends Feature {
         LiteralArgumentBuilder<CommandSourceStack> command = Commands.literal("suicide")
                 .executes(ctx -> {
                     CommandSender sender = ctx.getSource().getSender();
+                    if (!KamsTweaks.getInstance().getConfig().getBoolean("slash-suicide", true)) {
+                        sender.sendPlainMessage("/suicide is disabled.");
+                        return Command.SINGLE_SUCCESS;
+                    }
                     Entity executor = ctx.getSource().getExecutor();
                     if (executor instanceof Player player) {
                         player.setHealth(0.0);
