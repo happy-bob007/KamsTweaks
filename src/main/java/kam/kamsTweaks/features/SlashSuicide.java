@@ -42,11 +42,10 @@ public class SlashSuicide extends Feature {
                     Entity executor = ctx.getSource().getExecutor();
                     if (executor instanceof Player player) {
                         player.setHealth(0.0);
-                    }
-                    if (!(executor instanceof Player player)) {
-                        sender.sendMessage("Only players can use /suicide.");
                         return Command.SINGLE_SUCCESS;
                     }
+                    sender.sendMessage("Only players can use /suicide.");
+                    return Command.SINGLE_SUCCESS;
                 });
         LiteralCommandNode<CommandSourceStack> buildCommand = command.build();
         commands.registrar().register(buildCommand);
