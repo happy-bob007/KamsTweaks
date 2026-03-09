@@ -31,6 +31,7 @@ public final class KamsTweaks extends JavaPlugin {
     features.add(new Claims());
     features.add(new Graves());
     features.add(new SlashHat());
+    features.add(new SlashSuicide());
     features.add(new SilkSpawner());
     features.add(new SeedDispenser());
     features.add(new TeleportFeatures());
