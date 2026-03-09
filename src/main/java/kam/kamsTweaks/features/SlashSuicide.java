@@ -20,7 +20,9 @@ import org.bukkit.inventory.PlayerInventory;
 import org.jetbrains.annotations.NotNull;
 
 public class SlashSuicide extends Feature {
-
+    
+    @Override
+    public void setup() {}
     @Override
     public void shutdown() {}
 
