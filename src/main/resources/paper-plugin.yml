@@ -15,6 +15,9 @@ permissions:
   kamstweaks.hat:
     default: true
     description: "Use /hat"
+  kamstweaks.suicide:
+    default: true
+    description: "Use /suicide"
 
   kamstweaks.names.nick:
     default: true
