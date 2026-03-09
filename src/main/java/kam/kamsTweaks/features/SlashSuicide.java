@@ -35,8 +35,10 @@ public class SlashSuicide extends Feature {
                     if (executor instanceof Player player) {
                         player.setHealth(0.0);
                     }
-                    sender.sendMessage("Only players can use /suicide.");
-                    return Command.SINGLE_SUCCESS;
+                    if (!(executor instanceof Player player)) {
+                        sender.sendMessage("Only players can use /suicide.");
+                        return Command.SINGLE_SUCCESS;
+                    }
                 });
         LiteralCommandNode<CommandSourceStack> buildCommand = command.build();
         commands.registrar().register(buildCommand);
